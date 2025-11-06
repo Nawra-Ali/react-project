@@ -1,0 +1,37 @@
+export interface Shipment {
+    shipmentNumber: string;
+    orderID: number;
+    lineID: number;
+    lineNumber: number;
+    truckNumber?: string;
+    trailerNumber?: number;
+    trpNo?: string;
+    lpoNo?: string;
+    orderedDate: Date;
+    creationDate: Date;
+    dateRequired?: Date;
+    retainDate?: Date;
+    runoutDate?: Date;
+    itemNumber?: string;
+    itemDescription: string;
+    orderedQuantity?: number;
+    loadedQuantity?: number;
+    recievedQuantity?: number;
+    orderedDrum?: number;
+    loadedDrum?: number;
+    returnedDrums?: number;
+    exTankNo?: string;
+    timeIn?: Date;
+    timeOut?: Date;
+    deliveryDate?: Date;
+    meterNo?: string;
+    customerAccountNumber?: string;
+    supplyTo?: string;
+    location?: string;
+    userRole?: string;
+    deliveryReportStatus?: string;
+    deliveredBy?: string;
+    loadedBy?: string;
+    lastUpdated?: Date;
+    lastUpdatedBy?: string;
+}

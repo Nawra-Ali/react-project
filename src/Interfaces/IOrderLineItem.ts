@@ -1,0 +1,34 @@
+export interface IOrderLineItem {
+    orderID: number;
+    lineID: number;
+    lineNumber: number;
+    itemNumber: string;
+    itemDescription: string;
+    uom: string;
+    unitPrice?: string;
+    quantity: number;
+    quantityOld?: number;
+    extAmount: number;
+    requestDate: Date;
+    orderDate: Date;
+    scheduleArrivalDate?: Date;
+    requestedBy: string;
+    drumInsurance: number;
+    orderStatus?: string;
+    importMode: string;
+    lineDeliveryCharges?: number;
+    bunkeringDeliveryCharges?: number;
+    customerAccountNumber: string;
+    creationDate: Date;
+    createdBy: number;
+    lastUpdated?: Date;
+    lastUpdatedBy?: number;
+    quantityChangeReason?: string;
+    requestedDateChangeReason?: string;
+    qtyMT?: string;
+    lpoNo?: string;
+    otherReasonRemarks?: string;
+    requestedDateRemarks?: string;
+    actualQuantityLiftedLTR?: number;
+    actualQuantityLiftedMT?: string;
+}
