@@ -1,4 +1,4 @@
-export interface Shipment {
+export interface IShipment {
     shipmentNumber: string;
     orderID: number;
     lineID: number;

@@ -5,11 +5,12 @@ import App from './App.tsx'
 import { MsalProvider } from '@azure/msal-react';
 import { PublicClientApplication } from '@azure/msal-browser';
 import { msalConfig } from './config/authconfig.ts';
+import { AuthProvider } from './Services/AuthContext.tsx';
 
 const msalInstance = new PublicClientApplication(msalConfig);
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <MsalProvider instance={msalInstance}>    <App />
+    <MsalProvider instance={msalInstance}>    <AuthProvider><App /></AuthProvider>
     </MsalProvider>  </StrictMode>
 )
