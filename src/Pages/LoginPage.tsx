@@ -1,9 +1,11 @@
 import { useMsal } from '@azure/msal-react';
 import { loginRequest } from '../config/authconfig';
 import Logo from '../assets/BE Primary Logo White.png';
-import "../App.css"
-import { useNavigate } from 'react-router-dom';
 
+import { useNavigate } from 'react-router-dom';
+import { CiDeliveryTruck } from "react-icons/ci";
+/* import { BsTruck } from "react-icons/bs"; */
+import style from "../styles/login.module.css";
 function LoginPage()  {
   const { instance } = useMsal();
   const navigate = useNavigate();
@@ -13,28 +15,12 @@ function LoginPage()  {
   };
 
   return (
+    <div className={style.LoginContainerPage}>
     <div className="flex flex-col items-center justify-center">
-    <div
-      className="absolute top-0 left-0 w-full h-1/2 bg-blue-800 flex items-center justify-center p-8 text-white"
-      style={{
-        backgroundColor: "#000a51",
-        opacity: "1",
-        backgroundImage:
-        "repeating-radial-gradient( circle at 0 0, transparent 0, #000a51 200px ), repeating-linear-gradient( #0259a855, #0259a8 )",            }}
-    >
-                  <h1>Welcome to OMLA App</h1>
+    <CiDeliveryTruck className='icon-size' color="white"/>
 
-      <div>
-        <img
-          src={Logo}
-          alt={"Bapco Energies Logo"}
-          width={100}
-          height={100}
-          className='absolute top-5 right-5'
-        />
-      </div>
-    </div>
-    <div className='mt-30'>
+{/* <BsTruck size={200} color="white"/>
+ */}    <div className='mt-30'>
       <button onClick={handleLogin} className="flex items-center gap-2">
 <svg
 stroke="currentColor"
@@ -50,8 +36,10 @@ xmlns="http://www.w3.org/2000/svg"
 Login with Single Sign On
 </button>
     </div>
-  </div>
+    </div>
 
+ 
+  </div>
   );
 };
 
