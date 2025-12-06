@@ -12,8 +12,8 @@ function App() {
   console.log(isAuthenticated);
 
   return (
-    <div className="App">
-    <Router>
+    <div>
+    <Router basename='/omla'>
       <Routes>
         <Route
           path="/"

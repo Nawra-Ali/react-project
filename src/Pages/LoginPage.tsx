@@ -38,7 +38,7 @@ LOGIN WITH SSO
 </button>
     </div>
     <footer className="mt-10 text-white flex flex-col items-center justify-center ">
-    <p>  © {new Date().getFullYear()} BAPCO ENERGIES ID&T</p>
+    <p>  © {new Date().getFullYear()} BAPCO ENERGIES I&DT</p>
 
     </footer>
     </div>

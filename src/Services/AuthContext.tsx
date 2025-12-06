@@ -11,7 +11,7 @@ interface AuthContextType {
   account: AccountInfo | null;
   accessToken: string | null;
   user: IUser | null;
-  logout: () => Boolean;
+  logout: () => boolean;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);

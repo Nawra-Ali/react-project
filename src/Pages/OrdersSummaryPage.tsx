@@ -1,24 +1,32 @@
-import { useNavigate } from "react-router-dom";
-import { useAuth } from "../Services/AuthContext";
+import NavBar from "../components/NavBar";
+import OperatorOrderTile from "../components/OperatorOrderTile";
+import SearchBar from "../components/SearchBar";
 
-
-
+import style from "../styles/login.module.css";
 function OrdersSummaryPage(){
 
-  const { account, accessToken ,user, logout} = useAuth();
-    const navigate = useNavigate();
+  
 
-    function handleLogout(){
-      const result: Boolean = logout(); 
- if(result){
-  navigate("/login")
- }else{
-  console.log("Error in handle logout");
- }
 
-    }
     return (
-        <div className="p-6">
+  <div className="OrderSummary">
+<NavBar/>
+
+<SearchBar/>
+  <p className={style.OrderSummary}>Orders Summary</p>
+      {/* Render 5 tiles */}
+      {Array.from({ length: 5 }).map((_, i) => (
+        <OperatorOrderTile key={i} />
+      ))}
+  </div>  
+
+      );
+    }
+
+    
+export default OrdersSummaryPage;
+/*
+<div className="p-6">
           <h2>Orders Summary</h2>
           <h2>Welcome, {account?.name}</h2>
           <p>Your token: {accessToken?.slice(0, 20)}...</p>
@@ -26,9 +34,4 @@ function OrdersSummaryPage(){
           <button onClick={handleLogout} className="mt-4 bg-red-500 text-white px-4 py-2 rounded">
             Logout
           </button>
-        </div>
-      );
-    }
-
-    
-export default OrdersSummaryPage;
+        </div>*/ 
